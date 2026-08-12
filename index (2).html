@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover why your career no longer fits after motherhood — and how to redesign it around the woman you have become.">
+  <title>The Motherhood Career Gap | The Rising MOM</title>
+
+  <!-- Google fonts: remove these two lines if you want the page to work fully offline. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================================================================
+       QUICK BRAND EDITS — change these values to recolour the whole page
+       ================================================================ */
+    :root {
+      --forest: #123f36;
+      --forest-dark: #082d27;
+      --forest-soft: #1d594d;
+      --cream: #fbf7ed;
+      --cream-deep: #f0e8d7;
+      --white: #fffdf8;
+      --gold: #c79a3b;
+      --gold-light: #e7c878;
+      --ink: #17332e;
+      --muted: #61716c;
+      --line: rgba(18, 63, 54, .15);
+      --shadow: 0 24px 70px rgba(7, 42, 36, .16);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: "DM Sans", Arial, sans-serif; line-height: 1.65; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; line-height: 1.08; letter-spacing: -.025em; }
+    .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .gold { color: var(--gold-light); }
+    .eyebrow { margin-bottom: 15px; color: var(--gold); font-size: .78rem; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
+    .section { padding: 92px 0; }
+    .section-title { max-width: 760px; margin: 0 auto 18px; font-size: clamp(2.1rem, 4vw, 3.7rem); text-align: center; }
+    .section-intro { max-width: 690px; margin: 0 auto 52px; color: var(--muted); font-size: 1.08rem; text-align: center; }
+
+    /* HEADER */
+    .topbar { position: sticky; z-index: 30; top: 0; border-bottom: 1px solid rgba(255,255,255,.12); background: rgba(8,45,39,.96); backdrop-filter: blur(14px); }
+    .nav { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 13px; color: var(--white); text-decoration: none; }
+    .logo-disc { width: 58px; height: 58px; overflow: hidden; display: grid; flex: 0 0 auto; place-items: center; border: 2px solid rgba(231,200,120,.8); border-radius: 50%; background: white; }
+    .logo-disc img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.15); }
+    .brand-copy strong { display: block; font-family: "Playfair Display", Georgia, serif; font-size: 1.13rem; letter-spacing: .02em; }
+    .brand-copy span { display: block; color: rgba(255,255,255,.68); font-size: .68rem; letter-spacing: .13em; text-transform: uppercase; }
+    .button { display: inline-flex; min-height: 52px; align-items: center; justify-content: center; padding: 13px 23px; border: 0; border-radius: 999px; background: linear-gradient(135deg, var(--gold-light), var(--gold)); box-shadow: 0 10px 28px rgba(199,154,59,.25); color: var(--forest-dark); cursor: pointer; font: 700 .86rem "DM Sans", sans-serif; letter-spacing: .06em; text-decoration: none; text-transform: uppercase; transition: transform .2s, box-shadow .2s; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 15px 34px rgba(199,154,59,.35); }
+
+    /* HERO */
+    .hero { position: relative; overflow: hidden; padding: 76px 0 104px; background: radial-gradient(circle at 79% 34%, rgba(199,154,59,.14), transparent 25%), linear-gradient(135deg, var(--forest-dark), var(--forest)); color: var(--white); }
+    .hero::before { position: absolute; z-index: 0; top: 40px; left: 50%; color: rgba(231,200,120,.055); content: "GAP"; font: 700 clamp(11rem, 27vw, 25rem)/.75 "Playfair Display", Georgia, serif; letter-spacing: -.08em; pointer-events: none; transform: translateX(-50%); white-space: nowrap; }
+    .hero::after { position: absolute; right: -160px; bottom: -250px; width: 570px; height: 570px; border: 1px solid rgba(231,200,120,.16); border-radius: 50%; content: ""; }
+    .hero-grid { position: relative; z-index: 1; max-width: 1040px; margin-inline: auto; }
+    .hero-intro { max-width: 940px; margin: 0 auto 34px; text-align: center; }
+    .hero h1 { max-width: 940px; margin: 0 auto 24px; font-size: clamp(2.9rem, 5.8vw, 5.35rem); }
+    .hero .lead { max-width: 790px; margin: 0 auto; color: rgba(255,255,255,.79); font-size: clamp(1.04rem, 2vw, 1.22rem); }
+    .hero-tension { max-width: 860px; margin: 40px auto 0; }
+    .hero-cta { margin: 24px 0; text-align: center; }
+    #top, #masterclass, #register { scroll-margin-top: 96px; }
+    .truth-stack { margin: 0 0 22px; padding: 0; list-style: none; counter-reset: tension; }
+    .truth-stack li { display: grid; grid-template-columns: 34px 1fr; align-items: start; gap: 12px; margin: 15px 0; color: rgba(255,255,255,.92); font-size: 1.03rem; font-weight: 600; line-height: 1.55; counter-increment: tension; }
+    .truth-stack li::before { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid rgba(231,200,120,.55); border-radius: 50%; color: var(--gold-light); content: counter(tension); font-family: "DM Sans", sans-serif; font-size: .76rem; font-weight: 800; }
+    .open-loop { max-width: 760px; margin: 0 auto 28px; color: var(--gold-light); font-family: "Playfair Display", serif; font-size: 1.16rem; font-weight: 700; line-height: 1.5; text-align: center; }
+    .vsl-shell { max-width: 960px; margin-inline: auto; overflow: hidden; border: 1px solid rgba(231,200,120,.45); border-radius: var(--radius); background: #061f1b; box-shadow: var(--shadow); }
+    .video { position: relative; width: 100%; aspect-ratio: 16 / 9; display: block; border: 0; background: #061f1b; }
+    .play { width: 76px; height: 76px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: rgba(199,154,59,.94); box-shadow: 0 12px 35px rgba(0,0,0,.28); color: var(--forest-dark); font-size: 1.55rem; }
+    .video-note { padding: 18px 24px; color: rgba(255,255,255,.72); font-size: .84rem; text-align: center; }
+    .format-line { margin: 0 0 20px; color: var(--gold-light); font-size: .82rem; font-weight: 700; letter-spacing: .04em; }
+
+    /* RECOGNITION */
+    .recognition { background: var(--white); }
+    .recognition-grid { display: grid; gap: 26px; grid-template-columns: repeat(3, 1fr); }
+    .card { padding: 33px; border: 1px solid var(--line); border-radius: 20px; background: var(--cream); }
+    .card-number { width: 42px; height: 42px; display: grid; margin-bottom: 24px; place-items: center; border-radius: 50%; background: var(--forest); color: var(--gold-light); font-family: "Playfair Display", serif; font-weight: 700; }
+    .card h3 { margin-bottom: 12px; font-size: 1.5rem; }
+    .card p { margin-bottom: 0; color: var(--muted); }
+
+    /* BIG IDEA */
+    .big-idea { padding: 84px 0; background: var(--cream-deep); }
+    .quote { max-width: 900px; margin: auto; text-align: center; }
+    .quote p { margin-bottom: 22px; font: 600 clamp(2rem, 4.4vw, 4rem)/1.16 "Playfair Display", Georgia, serif; }
+    .quote span { color: var(--gold); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+
+    /* JOURNEY */
+    .journey { background: var(--forest); color: var(--white); }
+    .journey .section-intro { color: rgba(255,255,255,.68); }
+    .steps { display: grid; gap: 18px; grid-template-columns: repeat(3, 1fr); }
+    .step { position: relative; min-height: 280px; padding: 38px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); border-radius: 22px; background: rgba(255,255,255,.055); }
+    .step b { display: block; margin-bottom: 26px; color: var(--gold-light); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; }
+    .step h3 { margin-bottom: 16px; font-size: 2rem; }
+    .step p { color: rgba(255,255,255,.72); }
+    .step::after { position: absolute; right: 20px; bottom: -35px; color: rgba(231,200,120,.08); content: attr(data-letter); font: 700 9rem "Playfair Display", serif; }
+    .journey-bridge { max-width: 840px; margin: 34px auto 0; padding: 22px 28px; border-left: 3px solid var(--gold); background: rgba(255,255,255,.06); color: rgba(255,255,255,.86); font: italic 600 1.2rem/1.55 "Playfair Display", serif; text-align: center; }
+
+    /* TESTIMONIAL */
+    .testimonial { padding: 88px 0; background: var(--cream-deep); }
+    .testimonial blockquote { max-width: 900px; margin: 0 auto; color: var(--forest-dark); font: 600 clamp(1.65rem, 3.3vw, 2.8rem)/1.32 "Playfair Display", Georgia, serif; text-align: center; }
+    .testimonial cite { display: block; max-width: 700px; margin: 25px auto 0; color: var(--gold); font-style: normal; font-weight: 700; letter-spacing: .05em; text-align: center; }
+
+    /* ABOUT */
+    .about { background: var(--white); }
+    .about-grid { display: grid; align-items: center; gap: 70px; grid-template-columns: .86fr 1.14fr; }
+    .portrait { position: relative; }
+    .portrait::before { position: absolute; z-index: 0; top: -18px; left: -18px; width: 75%; height: 70%; border: 2px solid var(--gold); border-radius: var(--radius); content: ""; }
+    .portrait img { position: relative; z-index: 1; width: 100%; border-radius: var(--radius); box-shadow: var(--shadow); }
+    .about-copy h2 { margin-bottom: 22px; font-size: clamp(2.4rem, 4.8vw, 4.2rem); }
+    .about-copy p { color: var(--muted); }
+    .signature { margin-top: 24px; color: var(--forest); font: italic 600 1.55rem "Playfair Display", serif; }
+
+    /* CREDENTIAL MARQUEE */
+    .credentials { overflow: hidden; padding: 30px 0; border-block: 1px solid var(--line); background: var(--cream); }
+    .credentials-label { margin-bottom: 22px; color: var(--muted); font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-align: center; text-transform: uppercase; }
+    .marquee { display: flex; width: max-content; animation: scroll 28s linear infinite; }
+    .marquee:hover { animation-play-state: paused; }
+    .badge-row { display: flex; align-items: center; gap: 72px; padding-right: 72px; }
+    .badge-row img { width: auto; max-width: 180px; height: 78px; object-fit: contain; mix-blend-mode: multiply; }
+    @keyframes scroll { to { transform: translateX(-50%); } }
+
+    /* OPT-IN */
+    .optin { background: linear-gradient(145deg, var(--forest-dark), var(--forest-soft)); color: var(--white); }
+    .optin-box { max-width: 940px; margin: auto; padding: 58px; border: 1px solid rgba(231,200,120,.4); border-radius: 28px; background: rgba(255,255,255,.055); box-shadow: var(--shadow); text-align: center; }
+    .optin h2 { margin-bottom: 18px; font-size: clamp(2.25rem, 4.8vw, 4.2rem); }
+    .optin-copy { max-width: 650px; margin: 0 auto 32px; color: rgba(255,255,255,.74); }
+    .form { display: grid; gap: 13px; grid-template-columns: 1fr 1fr auto; }
+    .form input { min-width: 0; min-height: 56px; padding: 0 18px; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; outline: none; background: rgba(255,255,255,.1); color: white; font: inherit; }
+    .form input::placeholder { color: rgba(255,255,255,.58); }
+    .form input:focus { border-color: var(--gold-light); box-shadow: 0 0 0 3px rgba(231,200,120,.12); }
+    .form-consent { grid-column: 1 / -1; display: grid; grid-template-columns: 22px 1fr; gap: 11px; align-items: start; color: rgba(255,255,255,.78); font-size: .79rem; line-height: 1.5; text-align: left; }
+    .form-consent input { width: 18px; min-height: 18px; margin: 3px 0 0; accent-color: var(--gold); }
+    .form-recaptcha { grid-column: 1 / -1; display: flex; justify-content: center; min-height: 78px; }
+    .privacy { margin: 18px 0 0; color: rgba(255,255,255,.53); font-size: .75rem; }
+    .form-status { grid-column: 1 / -1; min-height: 1.5em; margin: 0; color: var(--gold-light); font-size: .84rem; text-align: center; }
+    .registration-open { margin: -10px 0 22px; color: var(--gold-light); font-weight: 700; }
+    .trust-signals { display: flex; justify-content: center; gap: 12px 24px; margin: 22px 0 0; padding: 0; color: rgba(255,255,255,.72); font-size: .82rem; list-style: none; }
+    .trust-signals li::before { margin-right: 7px; color: var(--gold-light); content: "✓"; }
+
+    .mobile-cta { display: none; }
+
+    footer { padding: 34px 0; background: #061f1b; color: rgba(255,255,255,.55); font-size: .78rem; text-align: center; }
+
+    @media (max-width: 900px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 68px; }
+      .recognition-grid, .steps { grid-template-columns: 1fr; }
+      .step { min-height: auto; }
+      .form { grid-template-columns: 1fr; }
+      .form .button { width: 100%; }
+      .about-grid { gap: 48px; }
+      .portrait { max-width: 580px; }
+    }
+    @media (max-width: 600px) {
+      .wrap { width: min(100% - 28px, 1160px); }
+      .nav { min-height: 70px; }
+      .logo-disc { width: 48px; height: 48px; }
+      .brand-copy span { display: none; }
+      .nav .button { min-height: 43px; padding: 10px 14px; font-size: .68rem; }
+      .hero { padding: 58px 0 72px; }
+      .hero h1 { font-size: clamp(2.55rem, 12vw, 4.2rem); }
+      .hero-intro { margin-bottom: 26px; }
+      .hero-tension { margin-top: 32px; }
+      .section { padding: 68px 0; }
+      .card, .step { padding: 28px; }
+      .optin-box { padding: 38px 22px; }
+      .badge-row { gap: 45px; padding-right: 45px; }
+      .badge-row img { max-width: 145px; height: 66px; }
+      body { padding-bottom: 56px; }
+      .trust-signals { align-items: center; flex-direction: column; gap: 6px; }
+      .mobile-cta { position: fixed; z-index: 50; right: 0; bottom: 0; left: 0; height: 56px; display: flex; align-items: center; justify-content: center; border-top: 1px solid rgba(231,200,120,.6); background: var(--forest-dark); color: var(--gold-light); font-size: .84rem; font-weight: 800; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; box-shadow: 0 -8px 28px rgba(0,0,0,.2); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .marquee { animation: none; }
+      .button { transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="The Rising MOM home">
+        <!-- EDIT LOGO: replace only the URL below. -->
+        <span class="logo-disc"><img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1783983104/ChatGPT_Image_Jul_6_2026_08_55_37_AM_ezc91d.png" alt="The Rising MOM logo"></span>
+        <span class="brand-copy"><strong>The Rising MOM</strong><span>Career Reinvention After Motherhood</span></span>
+      </a>
+      <a class="button" href="#register">Save my place</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-intro">
+          <p class="eyebrow">Free masterclass for working mothers</p>
+          <h1>You don’t hate your career. <span class="gold">You hate that it was designed for a version of you who no longer exists.</span></h1>
+          <p class="lead">For the woman who built a career she was proud of — then quietly realised it no longer fits the life, priorities or identity she has now. Discover why this disconnect is not ingratitude, indecision or lost ambition. It is the Motherhood Career Gap — and once you can name it, you can begin designing what comes next.</p>
+        </div>
+
+        <div class="vsl-shell" id="masterclass">
+          <!-- LIVE VSL: replace only the video ID in this URL if you upload a newer edit. -->
+          <iframe class="video" src="https://www.youtube-nocookie.com/embed/_kmmlWeHGT8?rel=0" title="The Motherhood Career Gap free masterclass with Amanda Carmichael" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="video-note">Watch the free masterclass, then reserve your place in the next live three-day challenge.</div>
+        </div>
+
+        <div class="hero-cta"><a class="button" href="#register">Challenge accepted →</a></div>
+
+        <section class="optin hero-optin ml-subscribe-form ml-subscribe-form-44735984" id="register" aria-labelledby="register-heading">
+          <div class="optin-box row-form">
+            <p class="eyebrow">Your career has not ended. It is ready to evolve.</p>
+            <h2 id="register-heading">Reserve your place in the live Motherhood Career Gap Challenge</h2>
+            <p class="optin-copy">Enter your details to register for the next live three-day challenge on Zoom. You’ll receive your confirmation, joining details and challenge emails directly to your inbox.</p>
+            <p class="registration-open">Registration is now open for the next live challenge.</p>
+
+            <form class="form ml-block-form" id="challenge-form" action="https://assets.mailerlite.com/jsonp/2563189/forms/195537892376839492/subscribe" method="post">
+              <input type="text" name="fields[name]" autocomplete="given-name" placeholder="First name" aria-label="First name" aria-required="true" required>
+              <input type="email" name="fields[email]" autocomplete="email" placeholder="Email address" aria-label="Email address" aria-required="true" required>
+              <button class="button primary" id="challenge-submit" type="submit">Save my place →</button>
+              <label class="form-consent">
+                <input type="checkbox" name="fields[privacy]" value="1" aria-required="true" required>
+                <span>Yes, I would like to register for the live Motherhood Career Gap Challenge and receive the challenge emails, career guidance and relevant programme information from The Rising MOM. I understand I can unsubscribe at any time.</span>
+              </label>
+              <div class="form-recaptcha">
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <input type="hidden" name="anticsrf" value="true">
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+            <ul class="trust-signals" aria-label="Registration assurances">
+              <li>A growing community of mothers</li>
+              <li>Three live Zoom sessions</li>
+              <li>No spam · Unsubscribe at any time</li>
+            </ul>
+            <p class="privacy" id="form-note">We’ll use your name and email address to manage your challenge registration and send the emails described above. You can unsubscribe at any time. For more details, review our Privacy Policy.</p>
+          </div>
+          <div class="optin-box row-success" style="display:none">
+            <h2>You’re registered.</h2>
+            <p class="optin-copy">Check your inbox for confirmation and details about joining the live challenge. If you cannot see the email, check your spam or promotions folder.</p>
+          </div>
+        </section>
+
+        <div class="hero-tension">
+          <ol class="truth-stack">
+            <li>Your career still looks successful on paper — so why doesn’t it feel successful anymore?</li>
+            <li>You know something needs to change — but leaving could risk everything you have built.</li>
+            <li>And the longer you remain undecided, the more you question whether the problem is your career… or you.</li>
+          </ol>
+          <p class="open-loop">There is a reason you feel caught between staying and leaving — and it is not the reason most women have been led to believe.</p>
+          <div style="text-align:center"><a class="button" href="#register">Challenge accepted →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recognition">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">The invisible career problem nobody prepared you for</p>
+        <h2 class="section-title">This is not a confidence gap.<br>It is the Motherhood Career Gap.</h2>
+        <p class="section-intro">The distance between the woman who built your career and the woman now trying to live it. The longer it remains unnamed, the easier it is to mistake growth for failure.</p>
+        <div class="recognition-grid">
+          <article class="card"><span class="card-number">01</span><h3>You still want success</h3><p>But the old definition of success asks too much of the life and identity you have now.</p></article>
+          <article class="card"><span class="card-number">02</span><h3>You question everything</h3><p>Staying feels wrong. Leaving feels reckless. So you remain stuck between two incomplete choices.</p></article>
+          <article class="card"><span class="card-number">03</span><h3>You need a new design</h3><p>Not a rushed escape plan, but a clear career direction shaped around your priorities, strengths and future.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="big-idea">
+      <div class="wrap quote">
+        <p>“You have not lost your ambition. You have <em>outgrown where you are using it.</em>”</p>
+        <span>The Rising MOM</span>
+      </div>
+    </section>
+
+    <section class="section journey">
+      <div class="wrap">
+        <p class="eyebrow" style="text-align:center">Inside the free three-day experience</p>
+        <h2 class="section-title">Stop drifting. Start designing.</h2>
+        <p class="section-intro">Three live Zoom sessions across three days. A practical, supportive journey to help you understand what changed, identify what you truly need and begin building a career that fits.</p>
+        <div class="steps">
+          <article class="step" data-letter="R"><b>Day One</b><h3>Recognise</h3><p>Name why your career feels different and uncover the real gap between who you were and who you are now.</p></article>
+          <article class="step" data-letter="I"><b>Day Two</b><h3>Identify</h3><p>See what motherhood has built in you, what your next career must provide and which old assumptions keep you stuck.</p></article>
+          <article class="step" data-letter="E"><b>Day Three</b><h3>Evolve</h3><p>Turn insight into direction and begin designing a career you can feel excited to wake up to.</p></article>
+        </div>
+        <p class="journey-bridge">By the end of Day 3, you’ll know whether your next move is to reposition inside your current role or rebuild something new — and I’ll show you both paths.</p>
+      </div>
+    </section>
+
+    <section class="testimonial" aria-labelledby="testimonial-heading">
+      <div class="wrap">
+        <p class="eyebrow" id="testimonial-heading" style="text-align:center">What changes when someone names the gap</p>
+        <blockquote>“I came to Amanda pregnant with my third child, knowing I wasn’t going back to my old work but with no idea what came next. She helped me untangle what felt like a scary black box of the unknown. I walked away feeling less tangled, more energised, and able to make decisions I had been blocked on for months.”</blockquote>
+        <cite>— Mother of three, former 1:1 client</cite>
+      </div>
+    </section>
+
+    <section class="section about">
+      <div class="wrap about-grid">
+        <div class="portrait">
+          <!-- EDIT AMANDA IMAGE: replace only this URL. -->
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786376824/ChatGPT_Image_Aug_10_2026_11_41_14_AM_aml2wh.png" alt="Amanda Carmichael facilitating a career reinvention session">
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">Meet your coach</p>
+          <h2>I am Amanda — and I know what it is to outgrow the life you worked hard to build.</h2>
+          <p>I spent more than a decade in the Royal Navy Submarine Service, in an environment where capability, resilience and achievement mattered. Then motherhood changed how I saw success, identity and the future I wanted for my family.</p>
+          <p>Today, as a qualified, trauma-informed career identity and matrescence coach, I help mothers stop forcing themselves back into an outdated version of success — and confidently design what comes next.</p>
+          <div class="signature">Welcome forward, not welcome back.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="credentials" aria-label="Professional credentials">
+      <p class="credentials-label">Professionally trained and accredited</p>
+      <div class="marquee">
+        <!-- Two identical rows create the seamless scrolling effect. -->
+        <div class="badge-row">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786388954/TCM_NLP_Master_full_color_vk3ylc.png" alt="NLP Master Practitioner credential">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389014/IMG-20260709-WA0004_2_1_ryac0h.jpg" alt="Professional coaching credential">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389034/blob_nzbx1q.png" alt="Professional accreditation">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389028/She_Leads_-_Self_Love_Pra_jkrwxl.png" alt="Self Love Practitioner credential">
+        </div>
+        <div class="badge-row" aria-hidden="true">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786388954/TCM_NLP_Master_full_color_vk3ylc.png" alt="">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389014/IMG-20260709-WA0004_2_1_ryac0h.jpg" alt="">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389034/blob_nzbx1q.png" alt="">
+          <img src="https://res.cloudinary.com/dpexfbu81/image/upload/v1786389028/She_Leads_-_Self_Love_Pra_jkrwxl.png" alt="">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 The Rising MOM · Amanda Carmichael · Career Reinvention After Motherhood</div>
+  </footer>
+
+  <a class="mobile-cta" href="#masterclass">Start here: free masterclass →</a>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"></script>
+  <script>
+    function ml_webform_success_44735984() {
+      window.location.assign('/thank-you.html');
+    }
+
+    document.getElementById('challenge-form').addEventListener('submit', function (event) {
+      var status = document.getElementById('form-status');
+      var consent = this.querySelector('input[name="fields[privacy]"]');
+      var submitButton = document.getElementById('challenge-submit');
+      var captcha = window.grecaptcha ? window.grecaptcha.getResponse() : '';
+
+      if (!consent.checked) {
+        event.preventDefault();
+        status.textContent = 'Please tick the consent box to save your place.';
+        consent.focus();
+        return;
+      }
+
+      if (window.grecaptcha && !captcha) {
+        event.preventDefault();
+        status.textContent = 'Please complete the “I’m not a robot” check before saving your place.';
+        return;
+      }
+
+      status.textContent = 'Saving your place…';
+      submitButton.disabled = true;
+      submitButton.setAttribute('aria-disabled', 'true');
+      submitButton.textContent = 'Saving your place…';
+    });
+  </script>
+  <script>fetch("https://assets.mailerlite.com/jsonp/2563189/forms/195537892376839492/takel")</script>
+</body>
+</html>
